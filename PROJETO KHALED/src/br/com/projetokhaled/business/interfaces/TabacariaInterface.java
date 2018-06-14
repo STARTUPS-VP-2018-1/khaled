@@ -13,8 +13,7 @@ import java.util.List;
  * @author internet
  */
 public interface TabacariaInterface {
-     public Tabacaria TabacariaFornecedor(Tabacaria tabacaria);
-    
-    public Tabacaria buscarTabacariaPorRegiao(String regiao_sp);
+     
+public Tabacaria buscarTabacariaPorRegiao(String regiao_sp);
     
 }

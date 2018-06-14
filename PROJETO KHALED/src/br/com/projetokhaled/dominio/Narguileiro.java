@@ -18,55 +18,46 @@ public class Narguileiro {
     private String email;
     private String nome;
     private String sobrenome;    
-    private int senha;
-
-    public Narguileiro(String pedro, String pedro123) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Narguileiro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    private String senha;
 
     public String getEmail() {
         return email;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public int getSenha() {
-        return senha;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
     }
 
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
 
-    public void setSenha(int senha) {
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.email);
-        hash = 97 * hash + Objects.hashCode(this.nome);
-        hash = 97 * hash + Objects.hashCode(this.sobrenome);
-        hash = 97 * hash + this.senha;
+        hash = 89 * hash + Objects.hashCode(this.email);
+        hash = 89 * hash + Objects.hashCode(this.nome);
+        hash = 89 * hash + Objects.hashCode(this.sobrenome);
         return hash;
     }
 
@@ -82,9 +73,6 @@ public class Narguileiro {
             return false;
         }
         final Narguileiro other = (Narguileiro) obj;
-        if (this.senha != other.senha) {
-            return false;
-        }
         if (!Objects.equals(this.email, other.email)) {
             return false;
         }
@@ -94,16 +82,11 @@ public class Narguileiro {
         if (!Objects.equals(this.sobrenome, other.sobrenome)) {
             return false;
         }
+        if (!Objects.equals(this.senha, other.senha)) {
+            return false;
+        }
         return true;
     }
 
-    public void setnome(String pedro) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    public void setsenha(String pedro123) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
 }

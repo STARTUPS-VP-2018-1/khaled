@@ -56,6 +56,11 @@ public class CadastroNarguileiro extends javax.swing.JFrame {
         jLabel4.setText("SENHA");
 
         jToggleButton1.setText("CADASTRAR");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         jToggleButton2.setText("VOLTAR");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +138,14 @@ public class CadastroNarguileiro extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
+        InicialKhaled login = new InicialKhaled();
+        login.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments

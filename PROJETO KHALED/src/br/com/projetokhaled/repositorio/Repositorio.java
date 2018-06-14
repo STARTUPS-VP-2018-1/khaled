@@ -15,27 +15,19 @@ import java.util.List;
  * @author internet
  */
 public class Repositorio {
-     public static List<Tabacaria> tabacariaDBFake = new ArrayList<>();
-     public static List<Narguileiro> narguileiroDBFake = new ArrayList<>();
-     
-     static{
+
+    public static List<Tabacaria> tabacariaDBFake = new ArrayList<>();
+    public static List<Narguileiro> narguileiroDBFake = new ArrayList<>();
+
+    static {
         Narguileiro novoNarguileiro = new Narguileiro();
-        novoNarguileiro.setnome("Pedro");
-        novoNarguileiro.setsenha("Pedro123");       
-        
-        Narguileiro novoNarguileiro2 = new Narguileiro ("Pedro","Pedro123");
-        
+        novoNarguileiro.setNome("Pedro");
+        novoNarguileiro.setSenha("Pedro123");
+
         Tabacaria novoTabacaria = new Tabacaria();
         novoTabacaria.setnome_Tabaca("Khaled");
         novoTabacaria.setrua("TabacanewSP");
         novoTabacaria.setregiao_sp("Leste");
-        
-        narguileiroDBFake.add (novoNarguileiro);
-        narguileiroDBFake.add (novoNarguileiro2);
-        tabacariaDBFake.add   (novoTabacaria);
-    
+
+    }
 }
-}
-
-
-

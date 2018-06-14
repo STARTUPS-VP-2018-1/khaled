@@ -25,30 +25,62 @@ public class NarguileiroBusiness implements NarguileiroInterface {
 
     @Override
     public Narguileiro NarguileiroPorEmail(String email) {
-         for(Narguileiro narguileiro:Repositorio.narguileiroDBFake){
-            if(narguileiro.getEmail() == email){
+        for (Narguileiro narguileiro : Repositorio.narguileiroDBFake) {
+            if (narguileiro.getEmail() == email) {
                 return narguileiro;
             }
-           
-             
-        } 
+
+        }
+        return null;
+    }
+
+
+
+    @Override
+    public boolean validaUsuario(Narguileiro usuario) {
+        for (Narguileiro cliente : Repositorio.narguileiroDBFake) {
+            if (cliente.getNome().
+                    equals(usuario.getNome())
+                    && cliente.getSenha().equals(cliente.getSenha())) {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
+    @Override
+    public Narguileiro validaUsuario(String nomeNarguileiro, String senha) {
+        Narguileiro usuario = null;
+
+        for (Narguileiro cliente : Repositorio.narguileiroDBFake) {
+            if (cliente.getNome().
+                    equals(nomeNarguileiro)
+                    && cliente.getSenha().equals(senha)) {
+                usuario = new Narguileiro();
+                usuario.setNome(nomeNarguileiro);
+                usuario.setSenha(senha);
+
+            }
+        }
+
+        return usuario;
+    }
+
+    @Override
+    public Narguileiro buscarNarguileiroPorUsuario(Narguileiro usuario) {
+         for(Narguileiro cliente: Repositorio.narguileiroDBFake){
+            if(cliente.getNome().equals(usuario.getNome())){
+                return cliente;
+            }
+        }       
         return null;
     }
 
     @Override
     public List<Narguileiro> buscarNarguileiroPorNome(String nome) {
-        
-        List<Narguileiro> listaDeNarguileirosEncontrados = new ArrayList<Narguileiro>();        
-        
-        for(int i = 0; i< Repositorio.narguileiroDBFake.size();i++){
-            Narguileiro narguileiro = Repositorio.narguileiroDBFake.get(i);
-            if(Narguileiro.getNarguileiro().startsWith(nome)){
-                listaDeNarguileirosEncontrados.add(narguileiro);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
-    @Override
-    public List<Narguileiro> buscarTodosNarguileiroS() {
-        return Repositorio.narguileiroDBFake; 
-    }
-    
-}
+     }
+

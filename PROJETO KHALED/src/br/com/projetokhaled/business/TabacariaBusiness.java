@@ -5,10 +5,27 @@
  */
 package br.com.projetokhaled.business;
 
+import br.com.projetokhaled.business.interfaces.TabacariaInterface;
+import br.com.projetokhaled.dominio.Narguileiro;
+import br.com.projetokhaled.dominio.Tabacaria;
+import br.com.projetokhaled.repositorio.Repositorio;
+
 /**
  *
  * @author internet
  */
-public class TabacariaBusiness {
+public class TabacariaBusiness implements TabacariaInterface{
+
+    @Override
+    public Tabacaria buscarTabacariaPorRegiao(String região_sp) {
+           for(Tabacaria tabacaria:Repositorio.tabacariaDBFake){
+            if(tabacaria.getregião_sp() == região_sp){
+                return tabacaria;
+            }
+           
+             
+        } 
+        return null;
+    }
     
 }

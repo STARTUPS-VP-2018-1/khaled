@@ -20,5 +20,10 @@ public interface NarguileiroInterface {
     
     public List<Narguileiro> buscarNarguileiroPorNome(String nome);
     
-    public List<Narguileiro> buscarTodosNarguileiroS();
+    boolean validaUsuario(Narguileiro usuario);
+    
+    public Narguileiro validaUsuario(String nomeNarguileiro, String senha);
+    
+    public Narguileiro buscarNarguileiroPorUsuario(Narguileiro usuario);
+    
 }
